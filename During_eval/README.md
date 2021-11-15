@@ -20,13 +20,32 @@ Differences between aptitude and apt?
 
 
 ### AppArmor
-What is (SELinux or) AppArmor?
+What is AppArmor?
 
 
 
 # During eval:
-
+## Simple set-up:
+- Check that the signature contained in "signature.txt" is identical to that of the ".vdi" file of the virtual machine to be evaluated. A simple "diff" should allow you to compare the two signatures. If necessary, ask the student being evaluated where their ".vdi" file is located.
 - Ensure that the machine does not have a graphical environment at launch.
+- A password will be requested before attempting to connect to this machine (must follow the rules imposed in the subject).
+- Finally, connect with a user with the help of the student being evaluated. This user must not be root.
+- Check that the UFW service is started with the help of the evaluator.
+- Check that the SSH service is started with the help of the evaluator.
+- Check that the chosen operating system is Debian or CentOS with the help of the evaluator.
+
+
+## User, group and password
+- A user with the login of the student being evaluated has to be already present on the virtual machine. Check that it has been added and that it belongs to the "sudo" and "user42" groups.
+
+- Make sure the rules imposed in the subject concerning the password policy have been put in place by following the following steps:
+- Create new user.
+- Assign password of choice (respecting subject rules) and explain how these rules were set up on your virtual machine.
+- Show one or two modified files.
+- Create a group named "evaluating" and assign it to this new user.
+- Finally, check that this user belongs to the "evaluating" group.
+- Finally, explain the advantages of this password policy, as well as the advantages and disadvantages of its implementation.
+
 
 ## Hostname
 - Check that the hostname of the machine is correctly formatted as follows: login42 (login of the student being evaluated).
@@ -36,7 +55,7 @@ What is (SELinux or) AppArmor?
 - You can now restore the machine to the original hostname.
 
 
-## Encrypted Partitions
+## Partitions
 - Show the partitions for this virtual machine.
 Using the command `lsblk` will display the partitions.
 
@@ -60,25 +79,12 @@ Check the contents of the files in this folder, you should see a history of the 
 
 - Run a command via sudo. See if the file(s) in the "/var/log/sudo/" folder have been updated.
 
-## SSH
-- Check that the SSH service is properly installed on the virtual machine.
-
-- Check that it is working properly.
-
-- Explain to you basically what SSH is and the value of using it
-
-- Verify that the SSH service only uses port 4242.
-
-- Use SSH in order to log in with the newly created user.
-- you can use a key or a simple password.
-- make sure you cannot use SSH with the "root" user.
-
 ## UFW
 - Check that the "UFW" program is properly installed on the virtual machine.
 
 - Check that it is working properly.
 
-- Explain to you basically what UFW is and the value of using it.
+- Explain basically what UFW is and the value of using it.
 
 - List the active rules in UFW. A rule must exist for port 4242.
 
@@ -86,27 +92,26 @@ Check the contents of the files in this folder, you should see a history of the 
 
 - Finally, delete this new rule with the help of the student being evaluated.
 
-## Password
-- Explain advantages of this password policy.
 
-- Explain advantages and disadvantages of its implementation.
+## SSH
+- Check that the SSH service is properly installed on the virtual machine.
 
+- Check that it is working properly.
 
-## User and Group
-- A user with the login of the student being evaluated has to be already present on the virtual machine. Check that it has been added and that it belongs to the "sudo" and "user42" groups.
+- Explain basically what SSH is and the value of using it
 
-- Make sure the rules imposed in the subject concerning the password policy have been put in place by following the following steps.
-- Create new user.
-- Assign password of choice (respecting rules) and explain how these rules were set up. (there should be one or two modified files)
-- Create a group named "evaluating" and assign it to this user.
-- Finally, check that this user belongs to the "evaluating" group.
+- Verify that the SSH service only uses port 4242.
+
+- Use SSH in order to log in with the newly created user:
+- you can use a key or a simple password.
+- make sure you cannot use SSH with the "root" user.
 
 ## Script
 - Show how the script works, by showing the code.
 - Explain what "cron" is.
-- Explain how it was set up so that it runs every 10min.
+- Explain how it was set up so that it runs every 10 minutes from when the server starts.
 - Ensure that this script runs every minute, make sure that the script runs with dynamic values correctly.
-- Make the script stop running when the server has started up, without modifying the script itself. (you'll have to restart one last time)
+- Make the script stop running when the server has started up, without modifying the script itself. (you'll have to restart one last time).
 - At startup, check if the script still exists in the same place, rights have remained unchanged, and not been modified.
 
 ## Bonus
@@ -116,8 +121,7 @@ points authorized for this project:
 --> Compare the output with the example given in the subject. Please note: if bonuses, refer to the bonus example:
 ![](../Pics/bonus_partitions.png)
 
-- Setting up WordPress, only with the services required by the subject,
-is worth 2 points.
+- Setting up WordPress, only with the services required by the subject, is worth 2 points.
 - The free choice service is worth 1 point.
 Verify and test the proper functioning and implementation of each extra service.
 For the free choice service, the student being evaluated has to give you a

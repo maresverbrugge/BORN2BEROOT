@@ -1,4 +1,4 @@
-You have to install and configure sudo following strict rules.
+You have to install and configure sudo following strict rules:
 
 To set up a strong configuration for your sudo group, you have to comply with the
 following requirements:
