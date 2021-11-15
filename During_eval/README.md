@@ -1,11 +1,13 @@
-# Virtual Machines
+# Information:
+
+### Virtual Machines
 Explain simply:
 - How a virtual machine works.
 
 
 - The purpose of virtual machines.
 
-# OS: Debian
+### OS: Debian
 Explain simply:
 - Your choice of operating system.
 
@@ -13,11 +15,11 @@ Explain simply:
 - The basic differences between CentOS and Debian.
 
 
-# Aptitude vs. Apt
+### Aptitude vs. Apt
 Differences between aptitude and apt?
 
 
-# AppArmor
+### AppArmor
 What is (SELinux or) AppArmor?
 
 

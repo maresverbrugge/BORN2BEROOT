@@ -11,5 +11,7 @@ MacOS: shasum centos_serv.vdi
 This is an example of what kind of output you will get:
 • 6e657c4619944be17df3c31faa030c25e43e40af
 
-PAY ATTENTION:
+**PAY ATTENTION:**
 ![](../../Pics/how_to_submit.png)
+
+So, for the eval: since you have to compare the signature.txt in your git with the signature of the VM you're doing the eval on, make a snapshot of your VM! When you reset the initial state of the snapshot after the eval, you will have the same signature for all 3 evals!!!
