@@ -13,18 +13,18 @@ Nice try of **42** to make it all a bit better:
 
 ## Contents:
 
-Subject
-Eval Sheet
+● Subject
+● Eval Sheet
 
-Hostname
-LVM
-User and groups
-Sudo
-SSH
-UFW
-Password
-Script
+● Hostname
+● LVM
+● User and groups
+● Sudo
+● SSH
+● UFW
+● Password
+● Script
 
-Bonus
+● Bonus
 
-During Eval
+● During Eval
