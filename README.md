@@ -6,5 +6,5 @@
 You can see why...
 
 
-Nice try of 42 to make it all a bit better:
+Nice try of **42** to make it all a bit better:
 ![](Pics/bob.png)
