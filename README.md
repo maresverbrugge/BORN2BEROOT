@@ -15,7 +15,7 @@ Nice try of **42** to make it all a bit better:
 
 Subject
 Eval Sheet
-----
+
 Hostname
 LVM
 User and groups
@@ -24,7 +24,7 @@ SSH
 UFW
 Password
 Script
----
+
 Bonus
----
+
 During Eval
