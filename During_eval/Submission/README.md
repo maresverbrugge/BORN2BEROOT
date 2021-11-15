@@ -12,4 +12,4 @@ This is an example of what kind of output you will get:
 • 6e657c4619944be17df3c31faa030c25e43e40af
 
 PAY ATTENTION:
-![](../Pics/how_to_submit.png)
+![](../../Pics/how_to_submit.png)
