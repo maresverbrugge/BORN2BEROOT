@@ -15,16 +15,16 @@ Your script must always be able to display the following information:
 • The IPv4 address of your server and its MAC (Media Access Control) address.
 • The number of commands executed with the sudo program.
 
-![](../Pics/explain_script.jpeg)
+![](../Pics/explain_script.png)
 
 ** ! During the defense, you will be asked to explain how this script
 works. You will also have to interrupt it without modifying it.
 Take a look at cron. ! **
 
-![](../Pics/example_script.jpeg)
+![](../Pics/example_script.png)
 
 
-![](../Pics/commands_requirements.jpeg)
+![](../Pics/commands_requirements.png)
 
 Below are commands you can use to check some of the subject’s requirements:
 
