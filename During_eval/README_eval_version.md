@@ -38,7 +38,7 @@ While Apt lacks UI, Aptitude has a text-only and interactive UI. Aptitude has a 
 ### AppArmor
 AppArmor is an important security feature, that provides “mandatory access control” (MAC) security. In effect, AppArmor allows developers to restrict the actions processes can take. AppArmor is particularly useful for restricting software that may be exploited, such as a web browser or server software.
 To view AppArmor’s status, run the following command in a terminal:
-`sudo apparmor_status`
+`sudo apparmor_status` or `sudo aa-status` will display AppArmor status
 
 # During eval:
 ## Simple set-up:
@@ -47,23 +47,33 @@ To view AppArmor’s status, run the following command in a terminal:
 - A password will be requested before attempting to connect to this machine (must follow the rules imposed in the subject).
 - Finally, connect with a user with the help of the student being evaluated. This user must not be root.
 - Check that the UFW service is started with the help of the evaluator.
+`sudo ufw status` will pisplay UFW status.
 - Check that the SSH service is started with the help of the evaluator.
+`sudo service ssh status` will display SSH status.
 - Check that the chosen operating system is Debian or CentOS with the help of the evaluator.
+`head -n 2 /etc/os-release` will display OS chosen.
 
 ## User, group and password
 - A user with the login of the student being evaluated has to be already present on the virtual machine. Check that it has been added and that it belongs to the "sudo" and "user42" groups.
+`getent group sudo` will display users in group sudo
+`getent group user42` will display users in group user42
 - Make sure the rules imposed in the subject concerning the password policy have been put in place by following the following steps:
 - Create new user.
+`sudo adduser <user_name>` will create a new user
 - Assign password of choice (respecting subject rules) and explain how these rules were set up on your virtual machine.
 - Show one or two modified files.
 - Create a group named "evaluating" and assign it to this new user.
+`sudo addgroup <group_name>` will create a new group
+`sudo usermod -aG <group_name> <user_name>` will assign user to group
 - Finally, check that this user belongs to the "evaluating" group.
+`getent group evaluating` will display users in group evaluating
 - Finally, explain the advantages of this password policy, as well as the advantages and disadvantages of its implementation.
 
 
 ## Hostname
 - Check that the hostname of the machine is correctly formatted as follows: login42 (login of the student being evaluated).
 - Modify this hostname by replacing the login with evaluator's login, then restart the machine. If on restart, the hostname has not been updated, the evaluation stops here.
+`hostnamectl set-hostname <server_name>` will change hostname
 - You can now restore the machine to the original hostname.
 
 
@@ -83,7 +93,13 @@ Using the command `lsblk` will display the partitions.
 - Show the implementation of the rules imposed by the subject.
 - Verify that the "/var/log/sudo/" folder exists and has at least one file.
 Check the contents of the files in this folder, you should see a history of the commands used with sudo.
+`cd /var/log/sudo/00/00` go to directory where sudo-history-file should be
+`ls` show contents of directory
 - Run a command via sudo. See if the file(s) in the "/var/log/sudo/" folder have been updated.
+`sudo apt update`
+`ls`
+`sudo echo hello` 
+`cd <nameofnewdirectory> && ls`
 
 ## UFW
 - Check that the "UFW" program is properly installed on the virtual machine.
@@ -126,3 +142,7 @@ Verify and test the proper functioning and implementation of each extra service.
 For the free choice service, the student being evaluated has to give you a
 simple explanation about how it works and why they think it is useful.
 Please note that NGINX and Apache2 are prohibited.
+
+
+
+# Wooooop finally finished baby!
