@@ -4,13 +4,11 @@
 Explain simply:
 - How a virtual machine works.
 
-
 - The purpose of virtual machines.
 
 ### OS: Debian
 Explain simply:
 - Your choice of operating system.
-
 
 - The basic differences between CentOS and Debian.
 
@@ -21,7 +19,6 @@ Differences between aptitude and apt?
 
 ### AppArmor
 What is AppArmor?
-
 
 
 # During eval:
