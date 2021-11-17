@@ -57,3 +57,5 @@ Passphrase: qwerty1234!
 --> Deselect Desktop environment and GNOME from software selection during the install in order to get a Debian install without a Graphical User Interface. Also deselect SSH server & standart system utilities.
 
 ## Sudo
+
+## SSH
