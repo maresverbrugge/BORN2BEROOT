@@ -37,8 +37,6 @@ I followed this link to set up my VM:
 
 https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/
 
-To install my VM, I followed my dear friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to star his repo! His magic can be found here: https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section
-
 ## Hostname
 The hostname of your virtual machine must be your login ending with 42 (mverbrug42).
 
@@ -49,8 +47,13 @@ root password: Waitword4!
 In addition to the root user, a user with your login as username has to be present:
 mverbrug (password: UserWaitword4!)
 
-## Sudo
+## Partitions
+To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to star his repo! His magic can be found here: https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section
+For the bonus part, I ended up following https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23.
 
+Passphrase: qwerty1234!
 
 "Since it is a matter of setting up a server, you will install the minimum of services. For this reason, a graphical interface is of no user here. It is therefore forbidden to install X.org or any other equivalent graphics server."
---> Deselect Desktop environment and GNOME from software selection during the install in order to get a Debian install without a Graphical User Interface.
+--> Deselect Desktop environment and GNOME from software selection during the install in order to get a Debian install without a Graphical User Interface. Also deselect SSH server & standart system utilities.
+
+## Sudo
