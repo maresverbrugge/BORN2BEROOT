@@ -61,3 +61,6 @@ Passphrase: qwerty1234!
 ## SSH
 
 ## UFW
+
+## Password 
+HIER VERDERRRRRR
