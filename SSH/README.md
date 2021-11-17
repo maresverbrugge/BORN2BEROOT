@@ -21,6 +21,7 @@ It is important for your SSH server to be correctly configured. If not, you are 
 As mentioned above, the SSH configuration files are located in the /etc/ssh folder. In this directory, you will also find:
 
 ssh_config : is used in order to configure SSH clients. It means that it defines rules that are applied everytime you use SSH to connect to a remote host or to transfer files between hosts;
+
 sshd_config : is used in order to configure your SSH server. It is used for example to define the reachable SSH port or to deny specific users from communicating with your server.
 
 1. To change the default assigned by the OpenSSH server, open the config file by running `sudo nano /etc/ssh/sshd_config` and change line "#Port 22" to "Port 4242". Make sure to lose the # at the beginning of the line!

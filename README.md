@@ -59,3 +59,5 @@ Passphrase: qwerty1234!
 ## Sudo
 
 ## SSH
+
+## UFW
