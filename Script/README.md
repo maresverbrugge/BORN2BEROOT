@@ -1,8 +1,8 @@
 # Script
 
 ## Subject
-> Finally, you have to create a simple script called monitoring.sh. It must be developed in bash.  
-> At server startup, the script will display some information (listed below) on all terminals every 10 minutes (take a look at wall). The banner is optional. No error must be visible.  
+> Finally, you have to create a simple script called `monitoring.sh`. It must be developed in `bash`.  
+> At server startup, the script will display some information (listed below) on all terminals every 10 minutes (take a look at `wall`). The banner is optional. No error must be visible.  
 > Your script must always be able to display the following information:  
 > • The architecture of your operating system and its kernel version.  
 > • The number of physical processors.  
@@ -19,13 +19,13 @@
 
 ![](../Pics/explain_script.png)
 
-
+> This is an example of how the script is expected to work:  
 ![](../Pics/example_script.png)
 
-
+> This is an example to check if the subject's requirements are met:
 ![](../Pics/commands_requirements.png)
 
-Below are commands you can use to check some of the subject’s requirements:  
+Used commands to check some of the subject’s requirements:  
 `head -n 2 /etc/os-release`  
 `/usr/sbin/aa-status`  
 `ss-tunlp`  
