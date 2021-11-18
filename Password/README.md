@@ -18,7 +18,7 @@
 ## Configuration 
 1. Install a password quality checking library with `sudo apt-get install libpam-pwquality`. Verify if it was sucesfully installed with `dpkg -l | grep libpam-pwquality`.
 2. To set password expiration time etc, modify your file with `sudo nano /etc/login.defs`.
-3. Change values:
+3. Change values:  
 • Your password has to expire every 30 days. --> `PASS_MAX_DAYS 30`  
 • The minimum number of days allowed before the modification of a password will be set to 2. --> `PASS_MIN_DAYS 2`  
 • The user has to receive a warning message 7 days before their password expires. --> `PASS_WARN_AGE 7`  
