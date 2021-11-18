@@ -21,8 +21,7 @@
 3. Change values:  
 • Your password has to expire every 30 days. --> `PASS_MAX_DAYS 30`  
 • The minimum number of days allowed before the modification of a password will be set to 2. --> `PASS_MIN_DAYS 2`  
-• The user has to receive a warning message 7 days before their password expires. --> `PASS_WARN_AGE 7`  
-• The minimum number of days allowed before the modification of a password will be set to 2. --> `PASS_MIN_DAYS 2`  
+• The user has to receive a warning message 7 days before their password expires. --> `PASS_WARN_AGE 7`   
 4. 🚨 ATTENTION 🚨: these settings only apply to the newly created users. You have to change all existing passwords according to your new password policy! You can either use `passwd` to change current user password, `passwd <user_name>` to change password of user OR use `chage <user_name>` to change all option like this.
 Other commands to use:  
 `chage -M <days> <user_name>` to change password expiration date  
