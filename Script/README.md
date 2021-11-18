@@ -31,7 +31,8 @@ Used commands to check some of the subject’s requirements:
 `ss-tunlp`  
 
 ## Commands
-🚨 You need to install net-tools package to use `netstat` and `ifconfig`!
+🚨 You need to install net-tools package to use `netstat` and `ifconfig`!  
+`sudo apt install net-tools`  
 
 1. The architecture of your operating system and its kernel version.  
 ```bash
@@ -92,5 +93,27 @@ hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..
 
 
 ## Cron
+1. Configure `cron` with `crontab -e` or as root with `sudo crontab -u root -e`.  
+2. The script must run every 10 minutes. Look for this line:  
+`23 # m h  dom mon dow   command`  
+and replace it with  
+`23 */10 * * * * sh /path/to/script`  
+OR add the following lines:  
+`@reboot sleep 7.5 && /root/script/monitoring.sh | wall`  
+`*/10 * * * * /root/script/monitoring.sh | wall`  
+3. Check root's scheduled cron jobs with `sudo crontab -u root -l`.  
+4. 
+```bash
+sudo systemctl enable cron.service
+sudo systemctl start cron.service
+sudo systemctl stop cron.service
+sudo systemctl restart cron.service
+sudo systemctl status cron.service
+```
 
-
+## Usage
+`sudo crontab -e` will get the script running (as root).  
+Add following lines to your crontab file:  
+`@reboot /path/to/file/monitoring.sh`  
+`*/10 * * * * /path/to/file/monitoring.sh`  
+🚨 You should write the FULL path to file (no ~/*/etc.) to make Cron happy and understand what you're talking about.
