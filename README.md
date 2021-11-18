@@ -45,7 +45,7 @@ I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian
 To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).  
 For the bonus part, I ended up following [this tutorial](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23).
 
-"Since it is a matter of setting up a server, you will install the minimum of services. For this reason, a graphical interface is of no user here. It is therefore forbidden to install X.org or any other equivalent graphics server."
+🚨 "Since it is a matter of setting up a server, you will install the minimum of services. For this reason, a graphical interface is of no user here. It is therefore forbidden to install X.org or any other equivalent graphics server." 🚨
 --> Deselect Desktop environment and GNOME from software selection during the install in order to get a Debian install without a Graphical User Interface. Also deselect SSH server & standart system utilities.
 
 
