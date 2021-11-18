@@ -26,6 +26,7 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 ## Contents
 ● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)  
 ● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)  
+
 ● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)  
 ● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)  
 ● [User and groups](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/User_groups)  
@@ -34,6 +35,7 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 ● [Password](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Password)  
 ● [Script](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Script)  
 ● [Bonus](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Bonus)  
+
 ● [During Eval](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval)  
 
 ## Setting Up Your VM
