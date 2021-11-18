@@ -10,9 +10,6 @@
 You can see why...
 </p>
 
-
-
-
 <p align=center>
 Nice try of 42 to make it all a bit better:
 </p>
@@ -29,32 +26,21 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 ## Contents
 ● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)  
 ● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)  
-● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)
-
-● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)
-
-● [User and groups](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/User_groups)
-
-● [SSH](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/SSH)
-
-● [UFW](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/UFW)
-
-● [Password](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Password)
-
-● [Script](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Script)
-
-● [Bonus](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Bonus)
-
-● [During Eval](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval)
-
-
+● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)  
+● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)  
+● [User and groups](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/User_groups)  
+● [SSH](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/SSH)  
+● [UFW](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/UFW)  
+● [Password](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Password)  
+● [Script](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Script)  
+● [Bonus](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Bonus)  
+● [During Eval](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval)  
 
 ## Setting Up Your VM
 I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/) to set up my VM.
 
 ## LVM / Partitions
-To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
-
+To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).  
 For the bonus part, I ended up following [this tutorial](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23).
 
 "Since it is a matter of setting up a server, you will install the minimum of services. For this reason, a graphical interface is of no user here. It is therefore forbidden to install X.org or any other equivalent graphics server."
