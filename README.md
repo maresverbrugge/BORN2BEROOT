@@ -40,6 +40,8 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 
 ## Setting Up Your VM
 I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/) to set up my VM.
+At Codam, you need to set up your machine at storage/goinfre/your_intra_name because you need quite a lot of space.   
+🚨 That "goinfre" folder is connected to a certain Mac so as long as you're working on this amazing project, you're stuck at one computer. Unless you want to keep installing you're VM over and over again, of course!
 
 ## LVM / Partitions
 To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).  
