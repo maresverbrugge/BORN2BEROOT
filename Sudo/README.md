@@ -32,7 +32,9 @@ Add the line `Defaults  badpass_message="<custom message of your choice>"`.
 4. Each action using sudo has to be archived, both inputs and outputs. The log file has to be saved in the /var/log/sudo/ folder.  
 Add the lines `Defaults   log_input, log_output` and `Defaults   iolog_dir=/var/log/sudo/`.  
 5. For security reasons, the paths that can be used by sudo must be restricted.  
-To set a secure path, add the line ` Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" `. Most of the line should already be there, you just need to add the very end `:/snap/bin`.  
+To set a secure path, add the line   
+`Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" `.  
+Most of the line should already be there, you just need to add the very end `:/snap/bin`.  
 6. The TTY mode has to be enabled for security reasons.  
 Add the line `Defaults  requiretty` to do so.  
 7. Then, change the default sudo log file. By default, sudo logs in syslog(3).  
