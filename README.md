@@ -81,4 +81,4 @@ Now you can control your virtual machine from the host terminal!
 
 
 ## Shout out
-To copain Arrtthhuur for making life just a bit easier < 3
+To copain Arrtthhuur for making life just a bit easier <3
