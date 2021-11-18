@@ -20,9 +20,9 @@ Nice try of 42 to make it all a bit better:
 ![](Pics/bob.png)
 
 ## General guidelines
-• The use of VirtualBox (or UTM if you can’t use VirtualBox) is mandatory.
-
-• You only have to turn in a signature.txt file at the root of your repository. You
+> • The use of VirtualBox (or UTM if you can’t use VirtualBox) is mandatory.
+> 
+> • You only have to turn in a signature.txt file at the root of your repository. You
 must paste in it the signature of your machine’s virtual disk. Go to [Submission and
 peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval/Submission) for more information.
 
@@ -54,8 +54,8 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 ## Setting Up Your VM
 I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/) to set up my VM.
 
-## Partitions
-To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to star his repo! His magic can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
+## LVM / Partitions
+To set up the encrypted partitions, I followed my friend @arthuR 's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
 
 For the bonus part, I ended up following [this tutorial](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23).
 
