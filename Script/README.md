@@ -31,32 +31,42 @@ Used commands to check some of the subject’s requirements:
 `ss-tunlp`  
 
 ## Commands
-🚨 You need to install net-tools package to use `netstat` and `ifconfig`!  
+🚨 You need to install net-tools package to use `netstat` and `ifconfig`!
 
 1. The architecture of your operating system and its kernel version.  
-`hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'`  
-`hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'`  
-`hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'`  
+```bash
+hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'
+hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'
+hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'
+```  
 
 2. The number of physical and virtual processors.  
-`cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l`  
-`cat /proc/cpuinfo | grep processor | wc -l`  
+```bash
+cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l  
+cat /proc/cpuinfo | grep processor | wc -l  
+```  
 
 3. The current available RAM and memory on your server and its utilization rate as a percentage.  
-`free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100.0}'`  
-`df -h / | awk 'NR==2{printf("%s/%s (%d%%)\n", $3, $2, $5)}'`  
+```bash
+free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100.0}'  
+df -h / | awk 'NR==2{printf("%s/%s (%d%%)\n", $3, $2, $5)}'  
+```  
 
 4. The date and time of the last reboot.  
-`who -b | sed -e 's/system boot//' | sed -e 's/[ \t]*//'`
+```bash
+who -b | sed -e 's/system boot//' | sed -e 's/[ \t]*//'  
+```  
 
 5. Whether LVM is active or not.
-`LVM=$( cat /etc/fstab | grep "/dev/mapper" | wc -l )`  
-`if [ $LVM -gt 0 ]`  
-`then`  
-`echo "#LVM use: yes"`  
-`else`  
-`echo "#LVM use: no"`  
-`fi`
+```bash
+LVM=$( cat /etc/fstab | grep "/dev/mapper" | wc -l )  
+if [ $LVM -gt 0 ]  
+then  
+echo "#LVM use: yes"  
+else  
+echo "#LVM use: no"  
+fi
+```  
 
 6. The number of active connections.  
 `awk </proc/net/tcp 'BEGIN{t=0};{if ($4 == "01") {t++;}};END{print t}'`
@@ -64,14 +74,20 @@ or
 `netstat -ant | grep ESTABLISHED | wc -l`
 
 7. The number of users using the server.  
-`who | uniq | wc -l`
+```bash
+who | uniq | wc -l  
+```  
 
 8. The IPv4 address of your server and its MAC (Media Access Control) address.  
-`apt-get install net-tools`  
-`hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..' | head -1`")"`
+```bash
+apt-get install net-tools  
+hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..' | head -1`")"  
+```  
 
 9. The number of commands executed with the sudo program.
+```bash
 ``journalctl _COMM=sudo | grep COMMAND | uniq | wc -l`" cmd" `
+```  
 
 
 
