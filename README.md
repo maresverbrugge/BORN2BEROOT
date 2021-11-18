@@ -20,7 +20,7 @@ Nice try of 42 to make it all a bit better:
 > • The use of VirtualBox (or UTM if you can’t use VirtualBox) is mandatory.
 > 
 > • You only have to turn in a signature.txt file at the root of your repository. You
-must paste in it the signature of your machine’s virtual disk. Go to [Submission and
+must paste in it the signature of your machine’s virtual disk. Go to [submission and
 peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval/Submission) for more information.
 
 ## Contents
