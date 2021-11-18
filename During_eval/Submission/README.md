@@ -12,4 +12,4 @@
 **PAY ATTENTION:**
 ![](../../Pics/how_to_submit.png)
 
-So, for the eval: since you have to compare the signature.txt in your git with the signature of the VM you're doing the eval on, make a snapshot of your VM! When you reset the initial state of the snapshot after the eval, you will have the same signature for all 3 evals!!!
+So, for the eval: since you have to compare the signature.txt in your git with the signature of the VM you're doing the eval on, **make a snapshot of your VM!** When you reset the initial state of the snapshot after the eval, you will have the same signature for all 3 evals!!!
