@@ -30,5 +30,8 @@ Used commands to check some of the subject’s requirements:
 `/usr/sbin/aa-status`  
 `ss-tunlp`  
 
+## Commands
+
+## Cron
 
 
