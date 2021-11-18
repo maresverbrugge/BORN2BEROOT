@@ -39,7 +39,8 @@ Most of the line should already be there, you just need to add the very end `:/s
 Add the line `Defaults  requiretty` to do so.  
 7. Then, change the default sudo log file. By default, sudo logs in syslog(3).  
 However, to specify a custom log file, add the following line: `Defaults  syslog=local1`.  
-8. Run `sudo nano /etc/rsyslog.conf` and before the `auth,authpriv.*;local1.none` line add this line: `local1.*  /var/log/sudo/sudo.log`.  
+8. Run `sudo nano /etc/rsyslog.conf` and before the `auth,authpriv.*;local1.none` line  
+add this line: `local1.*  /var/log/sudo/sudo.log`.  
 9. Restart `rsyslog` by running `sudo systemctl restart rsyslog`.  
 10. All your sudo commands from now on will be logged in the /var/log/sudo/sudo.log file. To try it out, run something like `sudo echo hellooooo`. Check if it was correctly saved to the log file by running `sudo cat /var/log/sudo/sudo.log`.  
 
