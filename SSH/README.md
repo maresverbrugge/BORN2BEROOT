@@ -13,6 +13,7 @@ To be able to install a SSH server on Debian, you need to have sudo privileges. 
 
 ## Configuration
 It is important for your SSH server to be correctly configured. If not, you are at risk when it comes to SSH attacks and your entire infrastructure can be compromised easily.  
+
 As mentioned above, the SSH configuration files are located in the /etc/ssh folder. In this directory, you will also find:  
 **ssh_config** : is used in order to configure SSH clients. It means that it defines rules that are applied everytime you use SSH to connect to a remote host or to transfer files between hosts.  
 **sshd_config** : is used in order to configure your SSH server. It is used for example to define the reachable SSH port or to deny specific users from communicating with your server.  
