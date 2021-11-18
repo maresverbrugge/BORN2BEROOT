@@ -6,7 +6,7 @@
 > Then, retrieve the signature from the ".vdi" file (or ".qcow2 for UTM’users) of your virtual machine in sha1 format. Below are 4 command examples for a centos_serv.vdi file:
 > MacOS: shasum centos_serv.vdi
 > 
-> This is an example of what kind of output you will get:
+> This is an example of what kind of output you will get:  
 > • 6e657c4619944be17df3c31faa030c25e43e40af
 
 **PAY ATTENTION:**
