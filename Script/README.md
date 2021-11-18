@@ -25,7 +25,7 @@
 
 ![](../Pics/commands_requirements.png)
 
-Below are commands you can use to check some of the subject’s requirements:
+Below are commands you can use to check some of the subject’s requirements:  
 `head -n 2 /etc/os-release`  
 `/usr/sbin/aa-status`  
 `ss-tunlp`  
