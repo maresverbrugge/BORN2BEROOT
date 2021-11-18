@@ -36,9 +36,9 @@ Used commands to check some of the subject’s requirements:
 
 1. The architecture of your operating system and its kernel version.  
 ```bash
-hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'
-hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'
-hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'
+hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'  
+hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'  
+hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'  
 ```  
 
 2. The number of physical and virtual processors.  
@@ -66,7 +66,7 @@ then
 echo "#LVM use: yes"  
 else  
 echo "#LVM use: no"  
-fi
+fi  
 ```  
 
 6. The number of active connections.  
@@ -87,9 +87,11 @@ hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..
 
 9. The number of commands executed with the sudo program.
 ```bash
-``journalctl _COMM=sudo | grep COMMAND | uniq | wc -l`" cmd" `
+`journalctl _COMM=sudo | grep COMMAND | uniq | wc -l`" cmd"  
 ```  
 
+10. CPU load?
+`cat /proc/stat | awk '{printf("%.1f%%\n", ($2+$4)*100.0/($2+$4+$5))}' | head -1`  
 
 
 ## Cron
