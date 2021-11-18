@@ -1,6 +1,6 @@
 # Sudo
 
-## Subject:
+## Subject
 You have to install and configure sudo following strict rules:
 
 To set up a strong configuration for your sudo group, you have to comply with the
@@ -40,5 +40,5 @@ has to be saved in the /var/log/sudo/ folder. Add the lines `Defaults   log_inpu
 10. All your sudo commands from now on will be logged in the /var/log/sudo/sudo.log file. To try it out, run something like `sudo echo hellooooo`. Check if it was correctly saved to the log file by running `sudo cat /var/log/sudo/sudo.log`.
 
 
-### Information on TTY:
+### Information on TTY
 tty stands for TeleTYpewriter. tty is a command to print the file name of the terminal connected to standard input. It's used in Unix and Unix-like operating systems.

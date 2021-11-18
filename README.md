@@ -11,18 +11,17 @@ Nice try of **42** to make it all a bit better:
 
 ### SO to copain Arrtthhuur for making life just a bit easier < 3
 
-## General guidelines:
+## General guidelines
 • The use of VirtualBox (or UTM if you can’t use VirtualBox) is mandatory.
 • You only have to turn in a signature.txt file at the root of your repository. You
 must paste in it the signature of your machine’s virtual disk. Go to Submission and
 peer-evaluation for more information.
 
-## Contents:
+## Contents
 ● Subject
 ● Eval Sheet
-● Sudo
 ● Hostname
-● LVM
+● Sudo
 ● User and groups
 ● SSH
 ● UFW
@@ -32,7 +31,7 @@ peer-evaluation for more information.
 ● During Eval
 
 
-## Setting Up Your VM:
+## Setting Up Your VM
 I followed this link to set up my VM:
 
 https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/
@@ -56,11 +55,17 @@ Passphrase: qwerty1234!
 "Since it is a matter of setting up a server, you will install the minimum of services. For this reason, a graphical interface is of no user here. It is therefore forbidden to install X.org or any other equivalent graphics server."
 --> Deselect Desktop environment and GNOME from software selection during the install in order to get a Debian install without a Graphical User Interface. Also deselect SSH server & standart system utilities.
 
-## Sudo
+## Little trick
+1. Turn off your VM
+2. Go to settings in VirtualBox
+3. Network -> Adapter 1 -> Advanced -> Port forwarding
+4. Add new rule (little green button on right top side) and next parameters:
 
-## SSH
+**************************************************************************
+* Protocol       Host IP       Host Port       Guest IP       Guest Port *
+* TCP            127.0.0.1     4242            10.0.2.15      4242       *
+**************************************************************************
+5. In your host (physical) machine open Terminal and run `ssh -p <port> <user>@<hostname>` to login to your server.
 
-## UFW
+Now you can control your virtual machine from the host terminal!
 
-## Password 
-HIER VERDERRRRRR

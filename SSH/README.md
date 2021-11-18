@@ -1,14 +1,12 @@
 # SSH
 
-## Subject:
+## Subject
 The use of SSH will be tested during the defense by setting up a new account. You must therefore understand how it works.
 
 A SSH service will be running on port 4242 only. For security reasons, it must not be possible to connect using SSH as root.
 
 ## Install
 To be able to install a SSH server on Debian, you need to have sudo privileges. To check if you have those priviliges, run `groups` and check if "sudo" is there.
-
-Use `ssh -V` to check if you are currently able to connect as a client to SSH servers. It does NOT mean you have a SSH server running.
 
 1. Make sure all necessary packages are updates by running `sudo apt-get update`.
 2. `sudo apt install openssh-server` to install OpenSSH. In your console you'll see that a configuration file called "sshd_config" is created in the /etc/ssh folder.

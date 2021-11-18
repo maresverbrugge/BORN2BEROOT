@@ -16,8 +16,8 @@ Differences between aptitude and apt?
 ### AppArmor
 What is AppArmor?
 
-# During eval:
-## Simple set-up:
+# During eval
+## Simple set-up
 - Check that the signature contained in "signature.txt" is identical to that of the ".vdi" file of the virtual machine to be evaluated. A simple "diff" should allow you to compare the two signatures. If necessary, ask the student being evaluated where their ".vdi" file is located.
 - Ensure that the machine does not have a graphical environment at launch.
 - A password will be requested before attempting to connect to this machine (must follow the rules imposed in the subject).
