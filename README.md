@@ -28,22 +28,31 @@ peer-evaluation for more information.
 
 ## Contents
 ● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)
+
 ● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)
+
 ● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)
+
 ● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)
+
 ● [User and groups](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/User_groups)
+
 ● [SSH](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/SSH)
+
 ● [UFW](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/UFW)
+
 ● [Password](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Password)
+
 ● [Script](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Script)
+
 ● [Bonus](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Bonus)
+
 ● [During Eval](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval)
 
 
-## Setting Up Your VM
-I followed this link to set up my VM:
 
-https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/
+## Setting Up Your VM
+I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/) to set up my VM.
 
 ## Hostname
 The hostname of your virtual machine must be your login ending with 42 (mverbrug42).
