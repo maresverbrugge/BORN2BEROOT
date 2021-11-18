@@ -16,14 +16,14 @@
 > • The number of users using the server.  
 > • The IPv4 address of your server and its MAC (Media Access Control) address.  
 > • The number of commands executed with the sudo program.
-
-![](../Pics/explain_script.png)
-
+>
+> ![](../Pics/explain_script.png)
+>
 > This is an example of how the script is expected to work:  
-![](../Pics/example_script.png)
-
+> ![](../Pics/example_script.png)
+> 
 > This is an example to check if the subject's requirements are met:
-![](../Pics/commands_requirements.png)
+> ![](../Pics/commands_requirements.png)
 
 Used commands to check some of the subject’s requirements:  
 `head -n 2 /etc/os-release`  
