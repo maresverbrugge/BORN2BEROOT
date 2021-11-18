@@ -55,7 +55,7 @@ peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Durin
 I followed [this link](https://www.brianlinkletter.com/2012/10/installing-debian-linux-in-a-virtualbox-virtual-machine/) to set up my VM.
 
 ## LVM / Partitions
-To set up the encrypted partitions, I followed my friend @arthuR 's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
+To set up the encrypted partitions, I followed my friend @Arrtthhuur 's tutorial. Yes, you might want to use it too, but ONLY if you promise to ⭐️ his repo! His magic🧙🏻‍♂️ can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
 
 For the bonus part, I ended up following [this tutorial](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23).
 
