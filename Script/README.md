@@ -19,9 +19,6 @@
 
 ![](../Pics/explain_script.png)
 
-** ! During the defense, you will be asked to explain how this script
-works. You will also have to interrupt it without modifying it.
-Take a look at cron. ! **
 
 ![](../Pics/example_script.png)
 
@@ -29,12 +26,9 @@ Take a look at cron. ! **
 ![](../Pics/commands_requirements.png)
 
 Below are commands you can use to check some of the subject’s requirements:
-
-head -n 2 /etc/os-release
-
-/usr/sbin/aa-status
-
-ss-tunlp
+`head -n 2 /etc/os-release`  
+`/usr/sbin/aa-status`  
+`ss-tunlp`  
 
 
 
