@@ -1,12 +1,22 @@
 # BORN2BEROOT
 
+<p align=center>
 🌈 ✨ My Most Hated Project ✨ 🌈
+</p>
+
 
 ![](Pics/crying.png)
+<p align=center>
 You can see why...
+</p>
 
 
-Nice try of **42** to make it all a bit better:
+
+
+<p align=center>
+Nice try of 42 to make it all a bit better:
+</p>
+
 ![](Pics/bob.png)
 
 ## General guidelines
@@ -17,17 +27,17 @@ must paste in it the signature of your machine’s virtual disk. Go to Submissio
 peer-evaluation for more information.
 
 ## Contents
-● Subject
-● Eval Sheet
-● Hostname
-● Sudo
-● User and groups
-● SSH
-● UFW
-● Password
-● Script
-● Bonus
-● During Eval
+● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)
+● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)
+● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)
+● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)
+● [User and groups](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/User_groups)
+● [SSH](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/SSH)
+● [UFW](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/UFW)
+● [Password](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Password)
+● [Script](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Script)
+● [Bonus](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Bonus)
+● [During Eval](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval)
 
 
 ## Setting Up Your VM
@@ -46,9 +56,9 @@ In addition to the root user, a user with your login as username has to be prese
 mverbrug (password: UserWaitword4!)
 
 ## Partitions
-To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to star his repo! His magic can be found here: https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section
+To set up the encrypted partitions, I followed my friend Arrtthhuur's tutorial. Yes, you might want to use it too, but ONLY if you promise to star his repo! His magic can be found [here](https://github.com/Arrtthhuur/Born2beRoot/blob/main/lvm/README.md#section).
 
-For the bonus part, I ended up following https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23.
+For the bonus part, I ended up following [this tutorial](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/walkthrough37.txt#L23).
 
 Passphrase: qwerty1234!
 
