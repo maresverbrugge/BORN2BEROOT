@@ -27,10 +27,8 @@ must paste in it the signature of your machine’s virtual disk. Go to [Submissi
 peer-evaluation](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/During_eval/Submission) for more information.
 
 ## Contents
-● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)
-
-● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)
-
+● [Subject](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/subject_B2BR.pdf)  
+● [Eval Sheet](https://github.com/maresverbrugge/BORN2BEROOT/blob/master/eval_sheet_b2br.pdf)  
 ● [Hostname](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Hostname)
 
 ● [Sudo](https://github.com/maresverbrugge/BORN2BEROOT/tree/master/Sudo)
