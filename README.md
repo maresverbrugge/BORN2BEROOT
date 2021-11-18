@@ -1,6 +1,6 @@
 # BORN2BEROOT
 
-                    🌈 ✨ My Most Hated Project ✨ 🌈
+🌈 ✨ My Most Hated Project ✨ 🌈
 
 ![](Pics/crying.png)
 You can see why...
@@ -8,8 +8,6 @@ You can see why...
 
 Nice try of **42** to make it all a bit better:
 ![](Pics/bob.png)
-
-### SO to copain Arrtthhuur for making life just a bit easier < 3
 
 ## General guidelines
 • The use of VirtualBox (or UTM if you can’t use VirtualBox) is mandatory.
@@ -65,7 +63,11 @@ Passphrase: qwerty1234!
 * Protocol       Host IP       Host Port       Guest IP       Guest Port *
 * TCP            127.0.0.1     4242            10.0.2.15      4242       *
 **************************************************************************
+
 5. In your host (physical) machine open Terminal and run `ssh -p <port> <user>@<hostname>` to login to your server.
 
 Now you can control your virtual machine from the host terminal!
 
+
+## Shout out
+To copain Arrtthhuur for making life just a bit easier < 3
