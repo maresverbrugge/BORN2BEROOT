@@ -59,10 +59,10 @@ Passphrase: qwerty1234!
 3. Network -> Adapter 1 -> Advanced -> Port forwarding
 4. Add new rule (little green button on right top side) and next parameters:
 
-**************************************************************************
-* Protocol       Host IP       Host Port       Guest IP       Guest Port *
-* TCP            127.0.0.1     4242            10.0.2.15      4242       *
-**************************************************************************
+
+ Protocol | Host IP | Host Port | Guest IP | Guest Port
+ -----------|---------|-----------|----------|---------
+ TCP | 127.0.0.1 | 4242 | 10.0.2.15 | 4242      
 
 5. In your host (physical) machine open Terminal and run `ssh -p <port> <user>@<hostname>` to login to your server.
 
