@@ -1,30 +1,35 @@
-hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'  
-hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'  
-hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'  
+#!/bin/bash
+# MAKE VARIABLES AND STORE INFO IN IT
+arch=$(uname -a)
+cpu=$(grep "physical id" /proc/cpuinfo | sort | uniq | wc -l)
+vcpu=$(grep "processor" /proc/cpuinfo | wc -l)
+full_ram=$(free -m | awk '$1 == "Mem:" {print $2}')
+used_ram=$(free -m | awk '$1 == "Mem:" {print $3}')
+pram=$(free | awk '$1 == "Mem:" {printf("%.2f"), $3/$2*100}')
+full_disk=$(df -Bg | grep '^/dev/' | grep -v '/boot$' | awk '{ft += $2} END {print ft}')
+used_disk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} END {print ut}')
+pdisk=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} {ft+= $2} END {printf("%d"), ut/ft*100}')
+cpu_load=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
+last_boot=$(who -b | awk '$1 == "system" {print $3 " " $4}')
+lvm=$(lsblk | grep "lvm" | wc -l)
+lvm_use=$(if [ $lvm -eq 0 ]; then echo no; else echo yes; fi)
+tcp_con=$(cat /proc/net/sockstat{,6} | awk '$1 == "TCP:" {print $3}')
+user_log=$(users | wc -w)
+ip=$(hostname -I)
+mac=$(ip link show | awk '$1 == "link/ether" {print $2}')
+sudo_cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
-cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l  
-cat /proc/cpuinfo | grep processor | wc -l  
+# PRINT INFO THROUGH WALL
 
-free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100.0}'  
-df -h / | awk 'NR==2{printf("%s/%s (%d%%)\n", $3, $2, $5)}'  
-
-`cat /proc/stat | awk '{printf("%.1f%%\n", ($2+$4)*100.0/($2+$4+$5))}' | head -1`  
-
-who -b | sed -e 's/system boot//' | sed -e 's/[ \t]*//'  
-
-LVM=$( cat /etc/fstab | grep "/dev/mapper" | wc -l )  
-if [ $LVM -gt 0 ]  
-then  
-echo "#LVM use: yes"  
-else  
-echo "#LVM use: no"  
-fi  
-
-netstat -ant | grep ESTABLISHED | wc -l
-
-who | uniq | wc -l  
-
-apt-get install net-tools  
-hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..' | head -1`")"  
-
-`journalctl _COMM=sudo | grep COMMAND | uniq | wc -l`" cmd"  
+wall "  #Architecture: $arch
+        #CPU physical: $cpu
+        #vCPU: $vcpu
+        #Memory Usage: $used_ram/${full_ram}MB ($pram%)
+        #Disk Usage: $used_disk/${full_disk}Gb ($pdisk%)
+        #CPU load: $cpu_load
+        #Last boot: $last_boot
+        #LVM use: $lvm_use
+        #Connexions TCP: $tcp_con ESTABLISHED
+        #User log: $user_log
+        #Network: IP $ip ($mac)
+        #Sudo: $sudo_cmds cmd"

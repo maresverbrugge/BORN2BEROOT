@@ -35,63 +35,8 @@ Used commands to check some of the subject’s requirements:
 `sudo apt install net-tools`  
 
 1. Dispaly the architecture of your operating system and its kernel version.  
-```bash
-hostnamectl | grep "Operating System" | sed 's/Operating System: //' | sed -e 's/[ \t]*//'  
-hostnamectl | grep Kernel | sed 's/Kernel: //' | sed -e 's/[ \t]*//'  
-hostnamectl | grep Architecture | sed 's/Architecture: //' | sed -e 's/[ \t]*//'  
-```  
 
-2. Display the number of physical and virtual processors.  
-```bash
-cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l  
-cat /proc/cpuinfo | grep processor | wc -l  
-```  
-
-3. Dispaly the current available RAM and memory on your server and its utilization rate as a percentage.  
-```bash
-free -m | grep Mem | awk '{printf("%d/%dMB (%.2f%%)\n", $3, $2, $3/$2 * 100.0}'  
-df -h / | awk 'NR==2{printf("%s/%s (%d%%)\n", $3, $2, $5)}'  
-```  
-
-4. Display the CPU load?
-`cat /proc/stat | awk '{printf("%.1f%%\n", ($2+$4)*100.0/($2+$4+$5))}' | head -1`  
-
-5. Dispaly the date and time of the last reboot.  
-```bash
-who -b | sed -e 's/system boot//' | sed -e 's/[ \t]*//'  
-```  
-
-6. Display whether LVM is active or not.
-```bash
-LVM=$( cat /etc/fstab | grep "/dev/mapper" | wc -l )  
-if [ $LVM -gt 0 ]  
-then  
-echo "#LVM use: yes"  
-else  
-echo "#LVM use: no"  
-fi  
-```  
-
-7. Display the number of active connections.  
-`awk </proc/net/tcp 'BEGIN{t=0};{if ($4 == "01") {t++;}};END{print t}'`
-or
-`netstat -ant | grep ESTABLISHED | wc -l`
-
-8. Display the number of users using the server.  
-```bash
-who | uniq | wc -l  
-```  
-
-9. Display the IPv4 address of your server and its MAC (Media Access Control) address.  
-```bash
-apt-get install net-tools  
-hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..' | head -1`")"  
-```  
-
-10. Display the number of commands executed with the sudo program.
-```bash
-`journalctl _COMM=sudo | grep COMMAND | uniq | wc -l`" cmd"  
-```  
+UITLEGGEN HOE SCRIPT IS OPGEBOUWD!!!
 
 ## Cron
 1. Configure `cron` with `crontab -e` or as root with `sudo crontab -u root -e`.  
@@ -106,7 +51,15 @@ hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..
 crontab -e  
   
 MAILTO=""  
-```  
+``` 
+So.....  
+Crontab file will look like this:  
+```bash 
+MAILTO=""  
+  
+@reboot sleep 7.5 && /root/Script/monitoring.sh  
+*/10 * * * * /root/Script/monitoring.sh  
+``` 
 
 ## Cron Commands  
 ```bash  
@@ -116,3 +69,6 @@ sudo systemctl stop cron.service
 sudo systemctl restart cron.service  
 sudo systemctl status cron.service  
 ```
+
+
+
