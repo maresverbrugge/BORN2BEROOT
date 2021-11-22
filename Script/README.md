@@ -100,7 +100,13 @@ hostname -I` "("`ip address | grep "link/ether" | grep -ioE '([a-z0-9]{2}:){5}..
 `*/10 * * * * /root/script/monitoring.sh | wall`  
 🚨 You should write the FULL path to file (no ~/*/etc.) to make Cron happy and understand what you're talking about.  
 3. Check root's scheduled cron jobs with `sudo crontab -u root -l`.  
-```
+
+4. Sometimes, cron will disregard the output because we haven't set up the "Mail To Address". To disable it, add this line at the top of the crontab:  
+```bash   
+crontab -e  
+  
+MAILTO=""  
+```  
 
 ## Cron Commands  
 ```bash  
@@ -110,9 +116,3 @@ sudo systemctl stop cron.service
 sudo systemctl restart cron.service  
 sudo systemctl status cron.service  
 ```
-
-ALTERNATIVE:  
-`crontab -e` and look for this line:  
-`23 # m h  dom mon dow   command`  
-and replace it with  
-`23 */10 * * * * sh /path/to/script`  
