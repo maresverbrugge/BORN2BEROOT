@@ -34,9 +34,18 @@ Used commands to check some of the subject’s requirements:
 🚨 You need to install net-tools package to use `netstat` and `ifconfig`!  
 `sudo apt install net-tools`  
 
-1. Dispaly the architecture of your operating system and its kernel version.  
-
-UITLEGGEN HOE SCRIPT IS OPGEBOUWD!!!
+1. Display the architecture of your operating system and its kernel version.  
+2. Display the number of physical processors.
+Display the number of virtual processors.
+Display the current available RAM on your server and its utilization rate as a percentage.
+Display the current available memory on your server and its utilization rate as a percentage.
+Display the current utilization rate of your processors as a percentage.
+Display the date and time of the last reboot.
+Display whether LVM is active or not.
+Display the number of active connections.
+Display the number of users using the server.
+Display the IPv4 address of your server and its MAC (Media Access Control) address.
+Display the number of commands executed with the sudo program.
 
 ## Cron
 1. Configure `cron` with `crontab -e` or as root with `sudo crontab -u root -e`.  

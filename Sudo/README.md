@@ -46,3 +46,7 @@ add this line: `local1.*  /var/log/sudo/sudo.log`.
 
 ### Information on TTY
 tty stands for TeleTYpewriter. tty is a command to print the file name of the terminal connected to standard input. It's used in Unix and Unix-like operating systems.
+Subjects states:  
+> The TTY mode has to be enabled for security reasons.  
+If TTY is not enabled, you only have one shell, which means that everything is accessible once you're logged in as root. So enble TTY!  
+Running `tty` will show the file name of your terminal connected to standard input. If tty is enabled, every terminal should display a new file name/number!
