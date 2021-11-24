@@ -49,7 +49,7 @@ SSH, also known as Secure Shell or Secure Socket Shell, is a network protocol th
 
 ### Set-up
 - `sudo adduser <user_name>` to create new user  
-- `sudo ufw status` will pisplay UFW status  
+- `sudo ufw status` will display UFW status  
 - `sudo service ssh status` will display SSH status  
 - `head -n 2 /etc/os-release` will display OS chosen  
 
@@ -82,6 +82,7 @@ and `nano /etc/pam.d/common-password` to show password set-up rules
 ## Sudo
 - `sudo` stands for "superuser do"  
 - `sudo adduser <user_name> <group_name>` to assign user to group  
+- `sudo visudo` to check/change sudo file   
 - `cd /var/log/sudo/00/00 && ls` to go to directory where sudo-history-file should be and show contents of directory  
 - You'll see directories with names like 01 2B 9S 4D etc. They contain the sudo logs!  
 - `sudo apt update` = example of sudo command  
