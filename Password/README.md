@@ -39,3 +39,8 @@ Explenation:
 • The password must not include the name of the user. --> `reject_username`  
 • The following rule does not apply to the root password: The password must haveat least 7 characters that are not part of the former password. --> `difok=7`  
 • Of course, your root password has to comply with this policy. --> `enforce_for_root`  
+
+
+## Advantages and disadvantages
+Discussion about the advantages and disadvantages of password security rules!
+https://security.stackexchange.com/questions/139702/does-preventing-consecutive-characters-in-a-password-actually-increase-security
