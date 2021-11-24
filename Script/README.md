@@ -50,7 +50,7 @@ Your script must:
 `awk` to pick specific fields  
 `free -m | awk '$1 == "Mem:" {print $2}'` to get total memory on server  
 `free | awk '$1 == "Mem:" {printf("%.2f"), $3/$2*100}'` to get percentage of utilization  
-5. Display the current utilization rate of your processors as a percentage.
+5. Display the current utilization rate of your processors as a percentage.  
 `top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}'` to get percentage of processor (CPU) utilization  
 6. Display the date and time of the last reboot.  
 `who -b` to get info on time of last boot  
@@ -66,7 +66,7 @@ Your script must:
 10. Display the IPv4 address of your server and its MAC (Media Access Control) address.  
 `hostname -I` to get IP address  
 `ip link show | awk '$1 == "link/ether" {print $2}'` to get MAC address  
-11. Display the number of commands executed with the sudo program.
+11. Display the number of commands executed with the sudo program.  
 `journalctl` for information on logs   
 `journalctl _COMM=sudo | grep COMMAND | wc -l` to get logs on sudo commands  
 
@@ -75,7 +75,7 @@ Your script must:
 2. The script must run every 10 minutes. Add the following lines:  
 `@reboot sleep 7.5 && /root/script/monitoring.sh | wall`  
 `*/10 * * * * /root/script/monitoring.sh | wall`  
-🚨 You should write the FULL path to file (no ~/*/etc.) to make Cron happy and understand what you're talking about.  
+🚨 You should write the FULL path to file (no ~/*/etc.) to make Cron happy and understand what you're talking about. 🚨  
 3. Check root's scheduled cron jobs with `sudo crontab -u root -l`.  
 
 4. Sometimes, cron will disregard the output because we haven't set up the "Mail To Address". To disable it, add this line at the top of the crontab:  
