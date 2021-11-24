@@ -69,6 +69,3 @@ sudo systemctl stop cron.service
 sudo systemctl restart cron.service  
 sudo systemctl status cron.service  
 ```
-
-
-
