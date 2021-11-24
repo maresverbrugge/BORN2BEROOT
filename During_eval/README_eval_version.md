@@ -1,5 +1,8 @@
 # Eval Prep 
-  
+
+`ssh -p 4242 username@localhost` to connect to VM from your host (physical) machine via ssh.    
+
+
 ### Virtual Machines  
 A Virtual Machine is a "guest machine" made of a virtual/software-defined/code-only computer running on a physical "host" server (hardware like a computer/laptop/phone).  
 A VM "borrows" dedicated amount of storage, CPU and memory from a physical host computer of remote server. A VM is a computer file, typically called an image, that behaves like an actual computer. The virtual machine is partitioned from the rest of the system, meaning that the software inside a VM can't interfere with the host computer's primary operating system.
@@ -71,61 +74,39 @@ and `nano /etc/pam.d/common-password` to show password set-up rules
 ## Partitions
 - `lsblk` will display the partitions  
 - To compare partitions, refer to the bonus example:  
-![](../Pics/bonus_partitions.png)
+![](../Pics/bonus_partitions.png)  
 
-- LVM (Logical Volume Manager) is a system of managing logical volumes, or filesystems, that is much more advanced and flexible than the traditional method of partitioning a disk into one or more segments and formatting that partition with a filesystem.
+- LVM (Logical Volume Manager) is a system of managing logical volumes, or filesystems, that is much more advanced and flexible than the traditional method of partitioning a disk into one or more segments and formatting that partition with a filesystem.  
 ![](../Pics/LVM.png)
 
-
 ## Sudo
-- Check that the "sudo" program is properly installed on the virtual machine.
-- Show assigning new user to the "sudo" group.
-- The subject imposes strict rules for sudo. First explain the value and operation of sudo using examples.
-- Show the implementation of the rules imposed by the subject.
-- Verify that the "/var/log/sudo/" folder exists and has at least one file.
-Check the contents of the files in this folder, you should see a history of the commands used with sudo.
-
-`cd /var/log/sudo/00/00` go to directory where sudo-history-file should be
-
-`ls` show contents of directory
-
-- Run a command via sudo. See if the file(s) in the "/var/log/sudo/" folder have been updated.
-
-`sudo apt update`
-
-`ls`
-
-`sudo echo hello` 
-
-`cd <nameofnewdirectory> && ls`
+- `sudo` stands for "superuser do"  
+- `sudo adduser <user_name> <group_name>` to assign user to group  
+- `cd /var/log/sudo/00/00 && ls` to go to directory where sudo-history-file should be and show contents of directory  
+- You'll see directories with names like 01 2B 9S 4D etc. They contain the sudo logs!  
+- `sudo apt update` = example of sudo command  
+- `cd <new_directory> && ls` to check last sudo command  
 
 ## UFW
-- Check that the "UFW" program is properly installed on the virtual machine.
-- Check that it is working properly.
-- Explain basically what UFW is and the value of using it.
-- List the active rules in UFW. A rule must exist for port 4242.
-- Add a new rule to open port 8080. Check that this one has been added by listing the active rules.
-- Finally, delete this new rule with the help of the student being evaluated.
-
+- UFW: Uncomplicated Firewall = command-line interface to manipulate your firewall  
+- `sudo ufw status` to check UFW status and list the active rules in UFW  
+- `sudo ufw allow <port_number>` to allow a new rule  
+- `sudo ufw delete <rule_number>` OR `sudo ufw delete allow <port_number>` to delete a rule  
+- `sudo ufw deny <port_number>` to deny rule  
 
 ## SSH
-- Check that the SSH service is properly installed on the virtual machine.
-- Check that it is working properly.
-- Explain basically what SSH is and the value of using it
-- Verify that the SSH service only uses port 4242.
-- Use SSH in order to log in with the newly created user:
-- you can use a key or a simple password.
-- make sure you cannot use SSH with the "root" user.
-
+- SSH, also known as Secure Shell or Secure Socket Shell, is a network protocol that gives users, particularly system administrators, a secure way to access a computer over an unsecured network.  
+- `sudo service ssh status` will display SSH status and ports listening  
+- `ssh -p <port> <username>@<ip_address>or<hostname>` to log in with the user with ssh   
 
 ## Script
-- Show how the script works, by showing the code.
-- Explain what "cron" is.
-- Explain how it was set up so that it runs every 10 minutes from when the server starts.
-- Ensure that this script runs every minute, make sure that the script runs with dynamic values correctly.
-- Make the script stop running when the server has started up, without modifying the script itself. (you'll have to restart one last time).
-- At startup, check if the script still exists in the same place, rights have remained unchanged, and not been modified.
-
+- Cron allows Linux and Unix users to run commands or scripts at a given date and time. You can schedule scripts to be executed periodically. Very useful for backups and cleaning directories etc. The cron service runs in the background and constantly checks the `/etc/crontab` file.  
+- `sudo crontab -e` to open crontab file  
+- to make the script running every minute, change lines in crontab file to:  
+`*/1 * * * * /path/to/monitoring.sh`  
+`*/1 * * * * sleep 30s && /path/to/monitoring.sh`  
+- delete `@reboot /path/to/monitoring.sh` to make script stop running at server start up  
+- `sudo reboot` to restart the machine  
 
 ## Bonus
 Check, with the help of the subject and the student being evaluated, the bonus

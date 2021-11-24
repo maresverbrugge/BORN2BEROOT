@@ -88,3 +88,7 @@ sudo systemctl stop cron.service
 sudo systemctl restart cron.service  
 sudo systemctl status cron.service  
 ```
+
+## Permission
+Once your script is ready, set the executable permission for the “monitoring.sh” file.  
+`chmod +x /path/to/file/monitoring.sh`  
