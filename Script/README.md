@@ -73,25 +73,12 @@ Your script must:
 ## Cron
 1. Configure `cron` with `crontab -e` or as root with `sudo crontab -u root -e`.  
 2. The script must run every 10 minutes. Add the following lines:  
-`@reboot sleep 7.5 && /root/script/monitoring.sh | wall`  
-`*/10 * * * * /root/script/monitoring.sh | wall`  
+`@reboot sleep 7.5 && /root/script/monitoring.sh`  
+`*/10 * * * * /root/script/monitoring.sh`  
 🚨 You should write the FULL path to file (no ~/*/etc.) to make Cron happy and understand what you're talking about. 🚨  
-3. Check root's scheduled cron jobs with `sudo crontab -u root -l`.  
-
-4. Sometimes, cron will disregard the output because we haven't set up the "Mail To Address". To disable it, add this line at the top of the crontab:  
-```bash   
-crontab -e  
-  
-MAILTO=""  
-``` 
-So.....  
-Crontab file will look like this:  
-```bash 
-MAILTO=""  
-  
-@reboot sleep 7.5 && /root/Script/monitoring.sh  
-*/10 * * * * /root/Script/monitoring.sh  
-``` 
+3. Sometimes, cron will disregard the output because we haven't set up the "Mail To Address". To disable it, `crontab -e` and add this line at the top of the crontab:  
+`MAILTO=""`  
+4. Check root's scheduled cron jobs with `sudo crontab -u root -l`.  
 
 ## Cron Commands  
 ```bash  
